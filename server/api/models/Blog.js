@@ -21,10 +21,7 @@ module.exports = {
       type: 'string',
       required: true
     },
-    date: {
-      type: 'number',
-      required: true
-    }
+    //no date needed, we will use sails' built in createdAt, and updatedAt
   }
 
 };

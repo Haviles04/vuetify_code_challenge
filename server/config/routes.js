@@ -19,7 +19,10 @@ module.exports.routes = {
   *                                                                          *
   ***************************************************************************/
 
-  '/': { view: 'pages/homepage' },
+  '/api/addblog': 'blog/add-blog',
+  '/api/getallblogs': 'blog/get-all-blogs',
+  'api/update-blog': 'blog/update-blog',
+  'api/delete-blog': 'blog/delete-blog',
 
 
   /***************************************************************************
