@@ -5,7 +5,7 @@
  * @help        :: See https://sailsjs.com/docs/concepts/actions
  */
 
-module.exports = async function (){
+module.exports = async function (req , res){
   try {
     const { title, author, text, id } = req.body;
     const blogs = await Blog.updateOne({id}).set(title, author, text, id);
