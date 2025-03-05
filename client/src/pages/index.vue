@@ -1,7 +1,4 @@
 <template>
-  <HelloWorld />
+  <AllBlogs />
 </template>
 
-<script setup>
-  //
-</script>
