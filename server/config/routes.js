@@ -19,10 +19,11 @@ module.exports.routes = {
   *                                                                          *
   ***************************************************************************/
 
-  '/api/addblog': 'blog/add-blog',
-  '/api/getallblogs': 'blog/get-all-blogs',
-  'api/update-blog': 'blog/update-blog',
-  'api/delete-blog': 'blog/delete-blog',
+  'POST /api/addblog': 'blog/add-blog',
+  'GET /api/getblog/:id': 'blog/get-blog',
+  'GET /api/getallblogs': 'blog/get-all-blogs',
+  'PUT /api/updateblog': 'blog/update-blog',
+  'DELETE api/deleteblog/:id': 'blog/delete-blog',
 
 
   /***************************************************************************
