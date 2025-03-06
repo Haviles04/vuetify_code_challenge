@@ -10,13 +10,12 @@
         class="mb-4"
       />
     </template>
-    <template v-else>
-      <BlogSnippet
-        v-for="blog in blogs"
-        :key="blog.id"
-        :blog="blog"
-      />
-    </template>
+    <BlogSnippet
+      v-for="blog in blogs"
+      v-else
+      :key="blog.id"
+      :blog="blog"
+    />
   </v-container>
 </template>
 
