@@ -58,7 +58,6 @@ const props = defineProps({
 })
 
 const formBlog = ref({ ...props.blog });
-
 const emit = defineEmits(["update"]);
 
 const updateBlog = async (isActive) => {
