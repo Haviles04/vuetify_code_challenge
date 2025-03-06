@@ -3,6 +3,9 @@
     max-width="750"
   >
     <section>
+      <h2 class="text-h2 text-center mb-6">
+        Welcome to my blog
+      </h2>
       <template v-if="!blogs.length">
         <v-skeleton-loader 
           v-for="num in [1,2,3]"
