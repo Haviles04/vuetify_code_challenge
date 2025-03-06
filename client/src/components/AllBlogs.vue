@@ -2,20 +2,22 @@
   <v-container 
     max-width="750"
   >
-    <template v-if="!blogs.length">
-      <v-skeleton-loader 
-        v-for="num in [1,2,3]"
-        :key="num"
-        type="article, divider"
-        class="mb-4"
+    <section>
+      <template v-if="!blogs.length">
+        <v-skeleton-loader 
+          v-for="num in [1,2,3]"
+          :key="num"
+          type="article, divider"
+          class="mb-4"
+        />
+      </template>
+      <BlogSnippet
+        v-for="blog in blogs"
+        v-else
+        :key="blog.id"
+        :blog="blog"
       />
-    </template>
-    <BlogSnippet
-      v-for="blog in blogs"
-      v-else
-      :key="blog.id"
-      :blog="blog"
-    />
+    </section>
   </v-container>
 </template>
 
