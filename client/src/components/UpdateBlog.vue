@@ -71,7 +71,7 @@ const updateBlog = async (isActive) => {
       body: JSON.stringify(formBlog.value)
     })
     if (res.ok) {
-      emit("update", formBlog.value);
+      emit("update", { ...formBlog.value });
       isActive.value = false;
     }
   }
@@ -79,6 +79,4 @@ const updateBlog = async (isActive) => {
     console.log(err);
   }
 }
-
-
 </script>
