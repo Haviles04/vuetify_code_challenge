@@ -23,7 +23,7 @@ module.exports.routes = {
   'GET /api/getblog/:id': 'blog/get-blog',
   'GET /api/getallblogs': 'blog/get-all-blogs',
   'PUT /api/updateblog': 'blog/update-blog',
-  'DELETE api/deleteblog/:id': 'blog/delete-blog',
+  'DELETE /api/deleteblog/:id': 'blog/delete-blog',
 
 
   /***************************************************************************

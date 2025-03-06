@@ -20,15 +20,19 @@
       >
         <p>{{ blog.text }}</p>
       </v-sheet>
-      <UpdateBlog
-        :blog="blog"
-        @update="updateBlog"
-      />
+      <div class="d-flex justify-end">
+        <UpdateBlog
+          :blog="blog"
+          @update="updateBlog"
+        />
+        <DeleteBlog :id="blog.id" />
+      </div>
     </v-container>
   </section>
 </template>
 
 <script setup>
+import DeleteBlog from '@/components/DeleteBlog.vue';
 import { ref, onMounted } from 'vue';
 import { useRoute } from 'vue-router';
 
