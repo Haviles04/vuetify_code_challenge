@@ -14,7 +14,7 @@
       </div>
       <v-divider />
       <v-sheet
-        :height="200"
+        :min-height="200"
         class="pa-4"
         elevated
       >
