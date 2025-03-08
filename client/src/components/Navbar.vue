@@ -1,10 +1,14 @@
 <template>
   <v-app-bar>
     <v-app-bar-title>My Blog</v-app-bar-title>  
-    <router-link to="/">
-      <p class="pr-4">
-        Home
-      </p>
-    </router-link>
+    <v-btn
+      to="/"
+      class="p-4"
+    >
+      <v-icon
+        icon="mdi-home"
+        color="primary"
+      />
+    </v-btn>
   </v-app-bar>
 </template>
