@@ -9,9 +9,10 @@ This is a code challenge, for vuetify. The objective was to create a blog with C
 ## Setup
 
 - Clone Repo
-- Install dependencies `npm ci`
 - CD client
+- Install dependencies `npm ci`
 - run `npm run dev`
 - Open new terminal
 - CD server
+- Install dependencies `npm ci`
 - run `sails lift`
