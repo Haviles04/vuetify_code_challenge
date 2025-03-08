@@ -6,7 +6,7 @@
       <h2 class="text-h2 text-center mb-6">
         Welcome to my blog
       </h2>
-      <AddBlog @handle-error="handleError" />
+      <AddBlog @error="handleError" />
       <template v-if="loading">
         <v-skeleton-loader 
           v-for="num in [1,2,3]"

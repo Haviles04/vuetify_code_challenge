@@ -56,7 +56,7 @@ const router = useRouter();
 
 const blog = ref({ title: "", author: "", text: "" });
 
-const emit = defineEmits(["handleError"]);
+const emit = defineEmits(["error"]);
 
 const addBlog = async () => {
   try {
@@ -72,7 +72,7 @@ const addBlog = async () => {
           router.push(`/blog/${blog.id}`)
     }
   } catch {
-    emit('handleError', 'Error while trying to add a blog, please try again later');
+    emit('error', 'Error while trying to add a blog, please try again later');
   }
 };
 </script>
