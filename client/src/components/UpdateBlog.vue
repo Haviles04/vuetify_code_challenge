@@ -58,7 +58,7 @@ const props = defineProps({
 })
 
 const formBlog = ref({ ...props.blog });
-const emit = defineEmits(["update"]);
+const emit = defineEmits(["update", "error"]);
 
 const updateBlog = async (isActive) => {
   try {
@@ -72,10 +72,12 @@ const updateBlog = async (isActive) => {
     if (res.ok) {
       emit("update", { ...formBlog.value });
       isActive.value = false;
+    } else {
+      throw new Error();
     }
   }
-  catch (err) {
-    console.log(err);
+  catch {
+    emit('error', 'Error updating blog, please try again later');
   }
 }
 </script>

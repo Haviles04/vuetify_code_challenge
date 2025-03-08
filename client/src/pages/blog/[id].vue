@@ -24,10 +24,18 @@
         <UpdateBlog
           :blog="blog"
           @update="updateBlog"
+          @error="handleError"
         />
-        <DeleteBlog :id="blog.id" />
+        <DeleteBlog
+          :id="blog.id"
+          @error="handleError"
+        />
       </div>
     </v-container>
+    <ErrorSnackbar 
+      v-model="showSnackbar"
+      :message="error"
+    />
   </section>
 </template>
 
@@ -39,9 +47,16 @@ import { useRoute } from 'vue-router';
 const route = useRoute();
 const { id } = route.params;
 const blog = ref({});
+const showSnackbar = ref(false);
+const error = ref("");
 
 const updateBlog = (updatedBlog) => {
     blog.value = updatedBlog;
+}
+
+const handleError = (message) => {
+  showSnackbar.value = true;
+  error.value= message;
 }
 
 onMounted(async () => {

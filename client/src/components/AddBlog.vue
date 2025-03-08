@@ -56,6 +56,8 @@ const router = useRouter();
 
 const blog = ref({ title: "", author: "", text: "" });
 
+const emit = defineEmits(["handleError"]);
+
 const addBlog = async () => {
   try {
     const res = await fetch("http://localhost:1337/api/addblog", {
@@ -69,8 +71,8 @@ const addBlog = async () => {
           const { blog } = await res.json();
           router.push(`/blog/${blog.id}`)
     }
-  } catch (err) {
-    console.log(err);
+  } catch {
+    emit('handleError', 'Error while trying to add a blog, please try again later');
   }
 };
 </script>

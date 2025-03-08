@@ -37,12 +37,14 @@
   import { useRouter } from 'vue-router';
 const router = useRouter();
 
+  const emit = defineEmits(['error']);
 const props = defineProps({
     id: {
         type: Number,
         required : true
     }
 })
+
 
     const deleteBlog = async () => {
     try {
@@ -54,10 +56,12 @@ const props = defineProps({
       })
       if (res.ok) {
           router.push('/');
+      } else {
+        throw new Error()
       }
     }
-    catch (err) {
-      console.log(err);
+    catch {
+      emit('error', 'Error deleting blog, please try again later');
     }
   }
   </script>

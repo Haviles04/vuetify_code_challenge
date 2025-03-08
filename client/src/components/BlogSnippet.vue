@@ -14,12 +14,13 @@
     </v-card-text>
 
     <v-card-actions>
-      <router-link
+      <v-btn
         :to="`/blog/${blog.id}`"
-        class="v-btn v-btn--flat v-btn--text"
+        color="primary"
+        elevated
       >
         View More
-      </router-link>
+      </v-btn>
     </v-card-actions>
   </v-card>
 </template>
