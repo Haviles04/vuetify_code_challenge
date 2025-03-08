@@ -15,4 +15,4 @@ This is a code challenge, for vuetify. The objective was to create a blog with C
 - Open new terminal
 - CD server
 - Install dependencies `npm ci`
-- run `sails lift`
+- if you have the sails CLI you can run `sails lift` otherwise run `node app.js`
